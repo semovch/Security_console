@@ -1,15 +1,8 @@
-from datacenter.models import Passcard
-from datacenter.models import Visit
-from datacenter.models import get_duration
-from datacenter.models import is_visit_long
-from django.shortcuts import render
+from datacenter.models import Passcard, Visit, get_duration, is_visit_long
+
+from django.shortcuts import render, get_object_or_404
 
 from django.http import Http404
-from django.shortcuts import get_object_or_404
-
-from django.utils.timezone import localtime
-
-import datetime
 
 
 def passcard_info_view(request, passcode):
