@@ -38,7 +38,7 @@ def get_duration(visit):
     if visit.leaved_at:
          duration = localtime(visit.leaved_at) - localtime(visit.entered_at)
     else:  
-         duration = localtime() - entered_at
+         duration = localtime() - localtime(visit.entered_at)
     return(duration)    
     
     
