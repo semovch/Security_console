@@ -46,7 +46,4 @@ def get_duration(visit):
     
     
 def is_visit_long(visit):
-    if get_duration(visit) > datetime.timedelta(minutes=60):
-        return True
-    else:
-        return False
+    return(get_duration(visit) > datetime.timedelta(minutes=60))
