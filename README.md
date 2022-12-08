@@ -5,10 +5,32 @@ Python3 должен быть уже установлен. Затем испол
 ```
 pip install -r requirements.txt
 ```
+Файл настроек settings.py берет свои настройки из файла .env с переменными окржения. Создайте этот файл в корневой директории проекта и укажите следующие переменные:
+```
+ENGINE
+HOST
+PORT
+NAME
+SERVER_USER
+PASSWORD
+INSTALLED_APPS
+SECRET_KEY
+DEBUG
+ROOT_URLCONF
+ALLOWED_HOSTS
+BACKEND
+DIRS
+APP_DIRS
+USE_L10N
+LANGUAGE_CODE
+TIME_ZONE
+USE_TZ
+DEFAULT_AUTO_FIELD
+```
 Рекомендуется испоьзовать [virtualenv/venv] для изоляции проекта.
 Для запуска в терминале:
 ```
-python main.py
+python manage.py runserver
 ```
 ### Цель проекта
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
