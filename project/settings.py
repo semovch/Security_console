@@ -5,42 +5,42 @@ load_dotenv('.env')
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('ENGINE'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('SERVER_USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
+        'ENGINE': os.getenv('DB_ENGINE'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
     }
 }
 
-INSTALLED_APPS = [os.getenv('INSTALLED_APPS')]
+INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = True
 
-ROOT_URLCONF = os.getenv('ROOT_URLCONF')
+ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = ['*']
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES = [
     {
-        'BACKEND': os.getenv('BACKEND'),
-        'DIRS': [os.path.join(BASE_DIR, os.getenv('DIRS'))],
-        'APP_DIRS': os.getenv('APP_DIRS'),
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
     },
 ]
 
 
-USE_L10N = os.getenv('USE_L10N')
+USE_L10N = True
 
-LANGUAGE_CODE = os.getenv('LANGUAGE_CODE')
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = os.getenv('TIME_ZONE')
+TIME_ZONE = 'Europe/Moscow'
 
-USE_TZ = os.getenv('USE_TZ')
+USE_TZ = True
 
-DEFAULT_AUTO_FIELD = os.getenv('DEFAULT_AUTO_FIELD')
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
