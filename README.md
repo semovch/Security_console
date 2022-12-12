@@ -7,25 +7,13 @@ pip install -r requirements.txt
 ```
 Файл настроек settings.py берет свои настройки из файла .env с переменными окржения. Создайте этот файл в корневой директории проекта и укажите следующие переменные:
 ```
-ENGINE
-HOST
-PORT
-NAME
-SERVER_USER
-PASSWORD
-INSTALLED_APPS
+DB_ENGINE
+DB_HOST
+DB_PORT
+DB_NAME
+DB_USER
+DB_PASSWORD
 SECRET_KEY
-DEBUG
-ROOT_URLCONF
-ALLOWED_HOSTS
-BACKEND
-DIRS
-APP_DIRS
-USE_L10N
-LANGUAGE_CODE
-TIME_ZONE
-USE_TZ
-DEFAULT_AUTO_FIELD
 ```
 Рекомендуется испоьзовать [virtualenv/venv] для изоляции проекта.
 Для запуска в терминале:
